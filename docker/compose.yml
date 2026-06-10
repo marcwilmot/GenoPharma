@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: popo
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"    # expose to host
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  sftp:
+    image: atmoz/sftp
+    ports:
+      - "22:22"
+    volumes:
+      - ./data:/home/user/upload
+    command: user:password:1005
+
+
+  pharmcat:
+    image: pgkb/pharmcat:3.1.1
+    container_name: pharmcat
+    working_dir: /pharmcat
+    volumes:
+      - ./data:/pharmcat/data
+    tty: true
+    stdin_open: true
+
+volumes:
+  pgdata:
+

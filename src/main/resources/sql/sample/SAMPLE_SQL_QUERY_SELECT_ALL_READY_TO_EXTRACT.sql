@@ -1,0 +1,1 @@
+select * from sample s where status = :status;
