@@ -6,7 +6,7 @@ import htsjdk.variant.variantcontext.Allele;
 import htsjdk.variant.variantcontext.Genotype;
 import htsjdk.variant.variantcontext.VariantContext;
 import htsjdk.variant.vcf.VCFFileReader;
-import io.whiteking.GenoPharma.dto.*;
+import net.marcwilmot.GenoPharma.dto.*;
 import net.marcwilmot.GenoPharma.dto.*;
 import net.marcwilmot.GenoPharma.infra.GeneRangeCache;
 import org.slf4j.Logger;

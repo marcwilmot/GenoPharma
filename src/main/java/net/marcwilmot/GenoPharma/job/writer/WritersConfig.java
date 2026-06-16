@@ -1,6 +1,6 @@
 package net.marcwilmot.GenoPharma.job.writer;
 
-import io.whiteking.GenoPharma.dto.*;
+import net.marcwilmot.GenoPharma.dto.*;
 import net.marcwilmot.GenoPharma.dto.*;
 import net.marcwilmot.GenoPharma.service.interfaces.ExtractVariantsService;
 import net.marcwilmot.GenoPharma.service.interfaces.SampleService;
